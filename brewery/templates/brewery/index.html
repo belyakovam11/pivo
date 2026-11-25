@@ -1,0 +1,287 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Движение — Крафтовая пивоварня</title>
+    <meta name="description" content="Новости, пиво и события независимой пивоварни Движение" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'brewery/styles.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="#" aria-label="Движение, главная">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>ДВИЖЕНИЕ</span>
+      </a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="#news">Новости</a>
+        <a href="#beer">Пиво</a>
+        <a href="#events">События</a>
+        <a href="#projects">Проекты</a>
+      </nav>
+      <button class="account-button" type="button" data-open-account>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21c.8-4.2 3.3-6.3 7.5-6.3s6.7 2.1 7.5 6.3"></path></svg>
+        <span>Войти</span>
+      </button>
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Независимая пивоварня · 2018</p>
+          <h1>Создаем вкус.<br />Двигаемся вместе.</h1>
+          <p class="hero-text">Делаем пиво для тех, кто ценит живой вкус, смелые идеи и настоящую компанию.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#beer">Выбрать пиво <span>↗</span></a>
+            <button class="button button-outline" type="button" data-open-account>Стать покупателем</button>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Банка пива Движение">
+          <div class="sun"></div>
+          <div class="can">
+            <div class="can-shine"></div>
+            <div class="can-label">
+              <div class="can-brand">ДВИЖЕНИЕ</div>
+              <div class="can-wave"><i></i><i></i><i></i></div>
+              <div class="can-type">Indian<br />Pale Ale</div>
+              <div class="can-volume">0,5 л · 6,2%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Ключевые направления">
+        <div>НАСТОЯЩИЙ ВКУС</div><span>✦</span>
+        <div>МЕСТНЫЕ ИНГРЕДИЕНТЫ</div><span>✦</span>
+        <div>ЖИВОЕ ОБЩЕНИЕ</div><span>✦</span>
+        <div>НОВЫЕ ПРОЕКТЫ</div>
+      </section>
+
+      <section class="section news-section" id="news">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Что нового</p>
+            <h2>Новости компании</h2>
+          </div>
+          <a class="text-link" href="#news">Все новости <span>↗</span></a>
+        </div>
+        <div class="news-grid">
+          <article class="news-card news-card-featured">
+            <div class="news-image image-brewery">
+              <span class="tag">Компания</span>
+            </div>
+            <div class="news-content">
+              <time datetime="2026-11-18">18 ноября 2026</time>
+              <h3>Открыли новую ферментационную зону</h3>
+              <p>Установили два чана на 100 гектолитров и продолжаем экспериментировать с сезонными рецептами.</p>
+              <a href="#" aria-label="Подробнее о новой ферментационной зоне">Читать <span>→</span></a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image image-award">
+              <span class="tag">Награды</span>
+            </div>
+            <div class="news-content">
+              <time datetime="2026-11-06">6 ноября 2026</time>
+              <h3>«Светлый путь» получил золото на фестивале</h3>
+              <a href="#" aria-label="Подробнее о награде">Читать <span>→</span></a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image image-hops">
+              <span class="tag">Сырье</span>
+            </div>
+            <div class="news-content">
+              <time datetime="2026-10-29">29 октября 2026</time>
+              <h3>Начали собирать хмель с нового поля</h3>
+              <a href="#" aria-label="Подробнее о сборе хмеля">Читать <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section beer-section" id="beer">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Новая линейка</p>
+            <h2>Встречайте «Вольти»</h2>
+          </div>
+        </div>
+        <div class="beer-feature">
+          <div class="beer-visual">
+            <div class="beer-bottle">
+              <div class="bottle-neck"></div>
+              <div class="bottle-cap"></div>
+              <div class="bottle-body">
+                <div class="bottle-label">
+                  <b>ВОЛЬТИ</b>
+                  <span>0,5 л</span>
+                  <strong>Янтарный<br />лагер</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="beer-info">
+            <span class="beer-number">01 / 03</span>
+            <h3>Теплый хлеб,<br />цитрус и мед</h3>
+            <p>Янтарный лагер с мягким солодовым характером. Светлая горечь и сухое послевкусие делают его идеальным для долгих встреч.</p>
+            <dl>
+              <div><dt>Алкоголь</dt><dd>5,1%</dd></div>
+              <div><dt>Плотность</dt><dd>12%</dd></div>
+              <div><dt>Горечь</dt><dd>24 IBU</dd></div>
+            </dl>
+            <button class="button button-dark" type="button" data-open-account>Купить оптом</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section events-section" id="events">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Встречаемся вживую</p>
+            <h2>Ближайшие события</h2>
+            <p class="section-note">Можно записаться онлайн или зарегистрироваться у организаторов на месте.</p>
+          </div>
+          <a class="text-link" href="#events">Весь календарь <span>↗</span></a>
+        </div>
+        <div class="events-grid">
+          <article class="event-card">
+            <div class="event-date"><strong>29</strong><span>Ноябрь</span></div>
+            <div class="event-details">
+              <span class="event-type">Дегустация</span>
+              <h3>Лимитированный релиз «Вольти»</h3>
+              <p>Первый бар из серии локальных встреч с пивоварами.</p>
+              <div class="event-meta"><span>Москва · 18:00</span><span>8 мест</span></div>
+            </div>
+            <button class="event-register" type="button" data-event="Лимитированный релиз «Вольти»">Записаться <span>↗</span></button>
+          </article>
+          <article class="event-card">
+            <div class="event-date"><strong>07</strong><span>Декабрь</span></div>
+            <div class="event-details">
+              <span class="event-type">Мастер-класс</span>
+              <h3>Как варить пиво дома</h3>
+              <p>Практическое занятие: от замеса до розлива без лишней химии.</p>
+              <div class="event-meta"><span>Пивоварня · 14:00</span><span>12 мест</span></div>
+            </div>
+            <button class="event-register" type="button" data-event="Как варить пиво дома">Записаться <span>↗</span></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section" id="projects">
+        <div class="project-copy">
+          <p class="section-kicker">Проект «Открытая варка»</p>
+          <h2>Придумай рецепт<br />вместе с нами</h2>
+          <p>Мы собираем идеи пивоваров со всей страны. Голосуй за рецепт, предложи свой или стань участником сварочной смены.</p>
+          <button class="button button-light" type="button" data-open-project>Участвовать в проекте</button>
+        </div>
+        <div class="project-recipe">
+          <div class="recipe-orbit orbit-one"></div>
+          <div class="recipe-orbit orbit-two"></div>
+          <div class="recipe-center">
+            <span>Следующая варка</span>
+            <strong>21</strong>
+            <b>Декабря</b>
+          </div>
+          <span class="ingredient ingredient-one">Хмель</span>
+          <span class="ingredient ingredient-two">Солод</span>
+          <span class="ingredient ingredient-three">Цитрус</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>ДВИЖЕНИЕ</span>
+      </a>
+      <p>Пиво для тех, кто движется.</p>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+        <a href="#">VK</a>
+      </div>
+      <p class="age">18+</p>
+    </footer>
+
+    {% if messages %}
+      <div class="server-messages" hidden>
+        {% for message in messages %}<span>{{ message }}</span>{% endfor %}
+      </div>
+    {% endif %}
+
+    <dialog class="modal" id="account-modal">
+      <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">×</button>
+      <div class="modal-heading">
+        <p class="section-kicker">Кабинет покупателя</p>
+        <h2>Выберите формат</h2>
+      </div>
+      <div class="account-types">
+        <button type="button" data-account-type="private">
+          <span>Частный покупатель</span>
+          <small>Эксклюзивные релизы и события</small>
+          <b>→</b>
+        </button>
+        <button type="button" data-account-type="wholesale">
+          <span>Оптовый покупатель</span>
+          <small>Для магазинов и заведений</small>
+          <b>→</b>
+        </button>
+      </div>
+      <form class="registration-form" id="account-form" method="post" action="{% url 'register_buyer' %}" hidden>
+        {% csrf_token %}
+        <input type="hidden" name="buyer_type" value="private" />
+        <button class="back-button" type="button" data-back-account>← Назад</button>
+        <h3 id="account-form-title">Регистрация</h3>
+        <label>Имя и фамилия<input name="name" required placeholder="Александр Иванов" /></label>
+        <label>Телефон или email<input name="contact" required placeholder="+7 (999) 000-00-00" /></label>
+        <label class="wholesale-only" hidden>Название компании<input name="company" placeholder="ООО «Название»" /></label>
+        <label class="agree"><input type="checkbox" required /><span>Согласен на обработку персональных данных</span></label>
+        <button class="button button-primary" type="submit">Зарегистрироваться</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="event-modal">
+      <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">×</button>
+      <div class="modal-heading">
+        <p class="section-kicker">Регистрация на мероприятие</p>
+        <h2 id="event-modal-title">Участие</h2>
+      </div>
+      <form class="registration-form" id="event-form" method="post" action="{% url 'register_event' %}">
+        {% csrf_token %}
+        <input type="hidden" name="event_title" id="event-title-input" />
+        <label>Имя и фамилия<input name="name" required placeholder="Александр Иванов" /></label>
+        <label>Телефон или email<input name="contact" required placeholder="+7 (999) 000-00-00" /></label>
+        <label>Количество участников<select name="guests"><option value="1">1 человек</option><option value="2">2 человека</option><option value="3">3 человека</option><option value="4">4 человека</option></select></label>
+        <button class="button button-primary" type="submit">Зарегистрироваться</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="project-modal">
+      <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">×</button>
+      <div class="modal-heading">
+        <p class="section-kicker">Проект «Открытая варка»</p>
+        <h2>Предложите участие</h2>
+      </div>
+      <form class="registration-form" id="project-form" method="post" action="{% url 'submit_project' %}">
+        {% csrf_token %}
+        <label>Имя или команда<input name="name" required placeholder="Команда «Вместе»" /></label>
+        <label>Телефон или email<input name="contact" required placeholder="hello@example.com" /></label>
+        <label>Идея для пива<textarea name="idea" rows="4" required placeholder="Расскажите о вкусах и ингредиентах"></textarea></label>
+        <button class="button button-primary" type="submit">Отправить заявку</button>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Заявка отправлена</div>
+    <script src="{% static 'brewery/script.js' %}"></script>
+  </body>
+</html>
